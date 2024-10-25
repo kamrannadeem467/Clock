@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <h5><span id="day">Mon</span> - <span id="month">jul</span> - <span id="year">24</span></h5>
+                    <h5><span id="day"></span> - <span id="month"></span> - <span id="year"></span></h5>
                 </div>
        
             </div>
@@ -54,7 +54,7 @@
             let sec = String(date.getSeconds()).padStart(2 , 0);
             let min = String(date.getMinutes()).padStart(2 , 0);
             let hr = String(date.getHours()).padStart(2 , 0);
-            let dy = String(date.getDay()).padStart(2 , 0)
+            let dy = String(date.getDate()).padStart(2 , 0)
             let mon = String(date.getMonth()).padStart(2 , 0)
             let yr = String(date.getFullYear()).padStart(2 , 0)
             let ampm = hr >= 12 ? " AM" : " PM";  
@@ -66,6 +66,8 @@
             hour.innerText = hr  + " :";
             month.innerText = mon;
             pmam.innerText = ampm;
+            day.innerText = dy
+            year.innerText = yr
         }
         setInterval(clock, 1000)
         clock()
